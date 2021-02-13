@@ -1,0 +1,97 @@
+Page({
+  data:{
+    mes:'hello world!!!',
+    list:[
+      {
+        id:0,
+        name:'li'
+      },
+      {
+        id:1,
+        name:'zi'
+      },
+      {
+        id:2,
+        name:'jian'
+      }
+    ],
+    num:0,
+    html:[
+      {
+        name:"div",
+        attrs:{
+          class:'mydiv',
+          style:"color:red"
+        },
+        children:[{
+          
+          name:"p",
+          attrs:{
+            class:'mydiv',
+            style:"color:red"
+          },
+          children:[{
+            type:"text",
+            text:'hello'
+          }]
+        }
+        ]
+      }
+    ],
+    tab:[
+      {
+        id:0,
+        name:'首页',
+        isActive:true
+      },
+      {
+        id:1,
+        name:'原创',
+        isActive:false
+      },
+      {
+        id:2,
+        name:'分类',
+        isActive:false
+      },
+      {
+        id:3,
+        name:'关于',
+        isActive:false
+      },
+    ]
+  },
+  jiang(e){
+    this.setData({
+      num:Number(e.detail.value)
+    })
+  },
+  jia(){
+    let a = this.data.num;
+    this.setData({
+      num:a+1
+    })
+  },
+  jian(){
+    let a = this.data.num;
+    this.setData({
+      num:a-1
+    })
+  },
+  phone(e){
+    console.log(e);
+  },
+  radio(e){
+    console.log(e);
+  },
+  itemjian(e){
+    let {tab} = this.data
+    for(var i=0;i<this.data.tab.length;i++){
+      tab[i].isActive = false
+    }
+    tab[e.detail].isActive = true;
+    this.setData({
+      tab
+    })
+  }
+})

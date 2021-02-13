@@ -1,0 +1,12 @@
+.tab .title {
+  display: flex;
+  padding: 10rpx;
+}
+.tab .title .item {
+  flex: 1;
+  text-align: center;
+}
+.tab .title .item.active {
+  color: skyblue;
+  border-bottom: 10rpx solid currentColor;
+}

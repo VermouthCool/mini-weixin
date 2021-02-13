@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Tab":"../../components/Tab/Tab"
+  },
+  "navigationBarBackgroundColor" : "#008c8c",
+  "navigationBarTitleText":"测试标题"
+}

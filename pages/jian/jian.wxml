@@ -1,0 +1,7 @@
+<!--pages/jian/jian.wxml-->
+<Tab tab="{{tab}}" binditemjian="itemjian" >
+  <block wx:if="{{tab[0].isActive}}">0</block>
+  <block wx:elif="{{tab[1].isActive}}">1</block>
+  <block wx:elif="{{tab[2].isActive}}">2</block>
+  <block wx:else>3</block>
+</Tab>
